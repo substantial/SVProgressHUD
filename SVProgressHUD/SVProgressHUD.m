@@ -459,6 +459,10 @@ CGFloat SVProgressHUDRingThickness = 6;
                              [hudView removeFromSuperview];
                              hudView = nil;
                              
+                             [stringLabel removeFromSuperview];
+                             [imageView removeFromSuperview];
+                             [spinnerView removeFromSuperview];
+			     
                              [overlayWindow removeFromSuperview];
                              overlayWindow = nil;
                              
