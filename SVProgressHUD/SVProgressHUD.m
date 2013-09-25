@@ -465,14 +465,6 @@ CGFloat SVProgressHUDRingThickness = 6;
 			     
                              [overlayWindow removeFromSuperview];
                              overlayWindow = nil;
-                             
-                             // fixes bug where keyboard wouldn't return as keyWindow upon dismissal of HUD
-                             [[UIApplication sharedApplication].windows enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id window, NSUInteger idx, BOOL *stop) {
-                                 if([window isMemberOfClass:[UIWindow class]]) {
-                                     [window makeKeyWindow];
-                                     *stop = YES;
-                                 }
-                             }];
 
                              UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
 
